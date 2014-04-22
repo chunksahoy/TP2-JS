@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+      <meta name="description" content="Un simple éditeur Web pour le JavaScript... en JavaScript!"/>
+      <meta name="author" content="Charles Hunter-Roy & Francis Clément" />
+      <title>WebJS</title>
+      <link href=" Styles/editeur.css" rel="stylesheet" type="text/css" />
+      <link href=" Styles/spectrum.css" rel="stylesheet" type="text/css" />	
+      
+      <script type="text/javascript" src="scripts/jquery-1.11.0.min.js"></script>
+      <script type="text/javascript" src="scripts/jquery.json-2.4.min.js"></script> 
+      <script type="text/javascript" src='scripts/spectrum.js'></script>
+	  <script type="text/javascript" src="scripts/algos.js"></script>
+	  <script type="text/javascript" src="scripts/text-info.js"></script>
+	  <script type="text/javascript" src="scripts/curseur.js"></script>
+	  <script type="text/javascript" src="scripts/clavier.js"></script>
+      <script type="text/javascript" src="scripts/options.js"></script>
+      <script type="text/javascript" src="scripts/minifier.js"></script>
+      <script type="text/javascript" src="scripts/diagnostique.js"></script>
+	</head>
+   
+<body>
+<div id="fancyDiv">
+<h1>Éditeur de code JavaScript</h1>
+<table id="awesomeOptionsTable">
+     <tr>
+     	<td><input type="button" id="optionsCouleurs" value="Couleurs" onclick="afficherOptions()"></td>
+        <td><input type="button" value="Minifier" onclick="minifier()"></td>
+        <td><input type="button" value="Diagnostiquer" id="diagnostique"></td>
+     </tr>
+  </table>
+  <div class="preformatted" id="ubertexter"><span class="prettyLignes"></span></div>
+	<table id="awesomeStatsTable">
+     <tr>
+        <td>Lignes: <span id="lignes">1</span></td>
+        <td>Colonnes: <span id = "colonnes">0</span></td>
+        <td>Mots: <span id="mots">0</span></td>
+        <td>Caractères: <span id = "caracteres">0</span></td>
+     </tr>
+  </table>
+  <div class="preformatted" id="minified"></div>
+ </div> 
+</body>
+</html>

@@ -1,0 +1,109 @@
+.preformatted {
+    font-family: monospace;
+    white-space: pre;
+    border-style: solid;
+	counter-reset: compteurlignes;
+}
+div#fancyDiv {
+    height: 1000px;
+    width: 1600px;
+    margin: 0 auto;
+    background-color: blue;
+    border-style: solid;
+    text-align:center;
+    color:white;
+}
+table#awesomeOptionsTable tr td input#optionsCouleurs {
+	width:100px;	
+}
+table#awesomeOptionsTable {
+    border:none;
+    width: 1500px;
+    color: black;
+    background-color: white;
+    margin: 0 auto;
+    text-align:left;
+}
+table#awesomeStatsTable {
+    border:solid black 1px;
+    width: 1500px;
+    color: black;
+    background-color: white;
+    margin: 0 auto;
+    text-align:left;
+}
+.motCle {
+	font-weight:900;
+	color:blue;		
+	font-style:italic;
+}
+table#awesomeStatsTable td {
+	border:solid black 1px;	
+}
+div#ubertexter {
+    height: 750px;
+    width: 1500px;
+    margin: 0 auto;
+    background-color: white;
+    text-align: left;
+    color:black;
+    overflow: scroll;
+}
+div#minified {
+    height: 70px;
+    width: 1500px;
+    font-family: monospace;
+	margin: 0 auto;
+    white-space: pre;
+    border-style: solid;
+    background-color: white;
+    text-align: left;
+    color:black;
+    overflow: scroll;
+}
+div.preformatted span.prettyLignes:before{
+	content: counter(compteurlignes);
+	width: 2em;
+	display: inline-block;
+	border-right: 1px solid lightgray;
+	background-color:lightgray;
+	text-align:right;
+}
+div.preformatted span.prettyLignes {
+	counter-increment: compteurlignes;
+}
+span#cursor
+{
+	display:inline-block;
+	width:10px;
+	animation:blink 1s step-end infinite;
+	-webkit-animation:blink 1s step-end infinite;
+}
+@keyframes blink{
+	0%{
+		background:white;
+	}
+	25%  {
+		background:lightblue;
+	}
+	50%  {
+		background:lightblue;
+	}
+	75%  {
+		background:lightblue;
+	}
+}
+@-webkit-keyframes blink{
+	0%{
+		background:white;
+	}
+	25%  {
+		background:lightblue;
+	}
+	50%  {
+		background:lightblue;
+	}
+	75%  {
+		background:lightblue;
+	}
+}
