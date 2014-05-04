@@ -5,16 +5,13 @@
 	counter-reset: compteurlignes;
 }
 div#fancyDiv {
-    height: 1000px;
-    width: 1600px;
+    height: 100%;
+    width: 100%;
     margin: 0 auto;
-    background-color: blue;
+    background-color:#06F;
     border-style: solid;
     text-align:center;
     color:white;
-}
-table#awesomeOptionsTable tr td input#optionsCouleurs {
-	width:100px;	
 }
 table#awesomeOptionsTable {
     border:none;
@@ -24,6 +21,9 @@ table#awesomeOptionsTable {
     margin: 0 auto;
     text-align:left;
 }
+table#awesomeOptionsTable tr td {
+    border:solid black 1px;
+}
 table#awesomeStatsTable {
     border:solid black 1px;
     width: 1500px;
@@ -32,10 +32,19 @@ table#awesomeStatsTable {
     margin: 0 auto;
     text-align:left;
 }
+.choixCouleur {
+	width:25px;
+	height:25px;
+}
 .motCle {
-	font-weight:900;
-	color:blue;		
+	font-weight:900;	
 	font-style:italic;
+}
+tr#couleursMotsCles td{
+	text-align:center;
+	width:25px;
+	border:solid black 1px;
+	cursor:pointer;
 }
 table#awesomeStatsTable td {
 	border:solid black 1px;	
@@ -71,6 +80,39 @@ div.preformatted span.prettyLignes:before{
 }
 div.preformatted span.prettyLignes {
 	counter-increment: compteurlignes;
+}
+.show {
+    z-index:1000;
+    position: absolute;
+    background-color:#C0C0C0;
+    border: 1px solid blue;
+	text-align:left;
+    display: block;
+    list-style-type: none;
+    list-style: none;
+}
+#menu {
+	text-align: left;
+	white-space: normal;
+	font-family:"Times New Roman", Times, serif;
+}
+ul{
+    margin:0;
+    padding:0;
+}
+.hide {
+    display: none;
+}
+.show ul, li{ 
+	list-style: none;
+}
+.show li {
+	 border: 0 !important; text-decoration: none;
+}
+.show li:hover { 
+	cursor: default;
+	background-color:#00F;
+	color:white;
 }
 span#cursor
 {

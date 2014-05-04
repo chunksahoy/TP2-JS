@@ -1,9 +1,18 @@
+function colorierMots(couleur) {
+	var mots = document.getElementsByClassName("motCle");
+	for(var i = 0; i < mots.length; ++i) {
+		mots[i].style.color = couleur;
+	}
+}
 function getMots() {
 	return ["break", "case", "catch", "continue", "debugger",
 		"default", "delete", "do", "else", "finally",
 		"for", "function", "if", "in", "instanceof",
 		"new", "return", "switch", "this", "throw",
 		"try", "typeof", "var", "void", "while", "with"];
+}
+function getTextOptions() {
+	return ["Copier(CTRL+C)", "Couper(CTRL+X)", "Coller(CTRL+V)"];	
 }
 function skippedChars() {
 	return [0, 13]; //en ordre: null, '\n'
@@ -83,6 +92,7 @@ function numeroterLignes(s) {
 }
 function rafraichirTexte(zone, s) {
 	peinturer(zone, numeroterLignes(formater(s)));
+	colorierMots(document.cookie.split(";")[0].split("=")[1]);
 }
 function lireUneTouche(event) {
 	var zone = document.getElementById("ubertexter");
@@ -140,12 +150,8 @@ function updateControls(texte) {
 	document.getElementById("mots").textContent = MoniteurStats.getInstance().mots(texte);
 	document.getElementById("caracteres").textContent = MoniteurStats.getInstance().caracteres(texte);
 }
-
 function obtenirTexte() {
 	return document.getElementById("ubertexter").textContent;
-}
-function peinturerZone (zone, s) {
-	zone.textContent = s;
 }
 document.addEventListener('keypress', lireUneTouche);
 document.addEventListener('keydown', lireSpecial);
